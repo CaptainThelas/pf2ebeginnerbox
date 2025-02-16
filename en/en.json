@@ -1,0 +1,15 @@
+{
+  "PF2EBB.CompendiumTitle": "Pathfinder Beginner Box",
+  "PF2EBB.ImportEnhancedMaps": "Use Enhanced Maps",
+  "PF2EBB.ImportBeginnerMonsters": "Use Beginner Box Monsters",
+  "PF2EBB.ImportActivateScene": "Activate Initial Scene",
+  "PF2EBB.ImportDisplayJournal": "Display Introductory Journal",
+  "PF2EBB.ImportPopulateHotbar": "Assign Hotbar Macros",
+  "PF2EBB.ImportCustomizeWorld": "Customize World Details",
+  "PF2EBB.WorldDescription": "<p>The Pathfinder Beginner Box contains everything you need to learn how to play the second edition of the Pathfinder Roleplaying Game while simultaneously teaching you how to use Foundry VTT features. Lovingly converted by members of the Pathfinder Second Edition community and the Foundry Virtual Tabletop staff, with careful attention paid to modernise the content for use on a virtual tabletop while respecting the original work. Experience the Menace Under Otari adventure using the full suite of Foundry VTT features, using maps, tiles, tokens, sounds, and much more to bring you content which truly cannot be experienced in the same way anywhere else.</p>",
+  "PF2EBB.BarricadeRemoval": "<p>How did your party remove the barricade?</p>",
+  "PF2EBB.BarricadeRemovalPrompt": "Barricade Removal Prompt",
+  "PF2EBB.BarricadeRemovalQuietly": "Quietly",
+  "PF2EBB.BarricadeRemovalLoudly": "Loudly",
+  "ADVENTURE.ImporterOptions": "Import Options"
+}

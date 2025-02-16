@@ -1,0 +1,7 @@
+2025/02/16-18:09:07.583 68bc Recovering log #162
+2025/02/16-18:09:07.586 68bc Delete type=0 #162
+2025/02/16-18:09:07.586 68bc Delete type=3 #161
+2025/02/16-18:11:06.816 c38 Level-0 table #166: started
+2025/02/16-18:11:06.817 c38 Level-0 table #166: 0 bytes OK
+2025/02/16-18:11:06.818 c38 Delete type=0 #164
+2025/02/16-18:11:06.832 c38 Manual compaction at level-0 from '!adventures!4hyvl2gjUfMNSExJ' @ 72057594037927935 : 1 .. '!adventures!5QXyvFAkXMfGuqT3' @ 0 : 0; will stop at (end)

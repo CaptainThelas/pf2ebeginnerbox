@@ -1,0 +1,1039 @@
+/* Compile with lessc pf2e-bb.less ../pf2e-bb.css*/
+/* imports */
+/* -------------------------------------------- */
+/*  Variables                                   */
+/* -------------------------------------------- */
+.pf2e-bb {
+  --paizo-blue-light: #7c7bab;
+  --paizo-blue-dark: #171f69;
+  --pf2e-red: #5e0000;
+  --pf2e-gold: #c5832b;
+  /* Colour Schema - Abomination Vaults 2022 release */
+  --bb-green: #186925;
+  --bb-green-dark: #25271c;
+  --bb-green-light: #f1f2df;
+  --bb-green-light-half: #f1f2df81;
+  --bb-gold: #e9b770;
+  --bb-gold-dark: #956321;
+  --bb-grey: #858e80;
+  --bb-grey-dark: #474d44;
+  --bb-tan: #996747;
+  --bb-brown: #431c00;
+  --bb-white: #ffffff;
+  --bb-table: #ede3c8;
+  --bb-table-light: #f5efe0;
+  --gradient-start: #2B0B17;
+  --gradient-end: #69164A;
+  /* Font Variables */
+  /* Headers */
+  --h1-font: 'Taroca', serif;
+  --h1-font-size: 1.9rem;
+  --h2-font: 'Good OT Cond Bold', serif;
+  --h2-sidebar: 'Good OT Cond Bold', serif;
+  --h2-sidebar-font-size: 1.5rem;
+  --h2-font-size: 1.5rem;
+  --h3-font: 'Good OT Cond Bold', serif;
+  --h3-font-size: 1.3rem;
+  /* Body */
+  --body-font-size: 1rem;
+  --main-font: 'Good OT', sans-serif;
+  --main-italics-font: 'Good OT Italic', sans-serif;
+  --main-bold-font: 'Good OT Bold', sans-serif;
+  --main-font-size: 1rem;
+  /* Narrative Text */
+  --narrative-font: 'Good OT', sans-serif;
+  --narrative-font-size: 1rem;
+  /* Title Heading */
+  --heading-title-font: 'Trajan', serif;
+  --heading-title-font-size: 3rem;
+  --heading-title-border-bottom: 5px solid transparent;
+  /* Regular Headings */
+  --heading-font: 'Cambria' , serif;
+  --heading-main-font-size: 1.625rem;
+  --heading-secondary-font-size: 1.5rem;
+  --heading-tertiary-font-size: 1.375;
+  --heading-incline-font-size: 1rem;
+  --heading-font-color: #481A19;
+  --heading-border: 2px solid transparent;
+  /* Box Font Settings */
+  --box-font: 'Good OT', sans-serif;
+  --box-font-size: 0.95rem;
+  /* ToC Font Settings */
+  --toc-box-heading-font-size: 1.1875rem;
+  --toc-table-font-size: 1rem;
+}
+/* Fonts (Constructed from bb-2022 Stylings) */
+@font-face {
+  font-family: "Taroca";
+  src: url("./fonts/Taroca.ttf") format('truetype');
+}
+@font-face {
+  font-family: "Good OT";
+  src: url("./fonts/GoodOT.otf") format('opentype');
+}
+@font-face {
+  font-family: "Good OT Bold";
+  src: url("./fonts/GoodOT-Bold.otf") format('opentype');
+}
+@font-face {
+  font-family: "Good OT Cond Bold";
+  src: url("./fonts/GoodOT-CondBold.otf") format('opentype');
+}
+@font-face {
+  font-family: "Good OT Italic";
+  src: url("./fonts/GoodOT-Italic.otf") format('opentype');
+}
+@font-face {
+  font-family: "Sabon LT";
+  src: url("./fonts/Sabon-LT-Std-Roman.otf") format('opentype');
+}
+@font-face {
+  font-family: "Sabon LT Italic";
+  src: url("./fonts/Sabon-LT-Std-Italic.ttf") format('truetype');
+}
+/* -------------------------------------------- */
+/*  Text                                        */
+/* -------------------------------------------- */
+.pf2e-bb div.journal-page-content a.entity-link.nostyle,
+.pf2e-bb section.journal-entry-content a.entity-link.nostyle,
+.pf2e-bb.adventure-importer a.entity-link.nostyle {
+  all: initial;
+}
+.pf2e-bb div.journal-page-content p,
+.pf2e-bb section.journal-entry-content p,
+.pf2e-bb.adventure-importer p,
+.pf2e-bb div.journal-page-content li,
+.pf2e-bb section.journal-entry-content li,
+.pf2e-bb.adventure-importer li {
+  font-family: var(--main-font);
+  font-size: var(--body-font-size);
+  line-height: 1.25rem;
+  margin: 0 0 0.6rem 0;
+  text-align: justify;
+}
+.pf2e-bb div.journal-page-content h1,
+.pf2e-bb section.journal-entry-content h1,
+.pf2e-bb.adventure-importer h1 {
+  font-family: var(--h1-font);
+  font-size: var(--h1-font-size);
+  letter-spacing: 0rem;
+}
+.pf2e-bb div.journal-page-content h1 .title,
+.pf2e-bb section.journal-entry-content h1 .title,
+.pf2e-bb.adventure-importer h1 .title {
+  font-family: var(--heading-title-font);
+  font-size: var(--heading-title-font-size);
+  border-bottom: var(--heading-title-border-bottom);
+  border-image: var(--heading-title-border-image);
+  text-align: center;
+}
+.pf2e-bb div.journal-page-content h2,
+.pf2e-bb section.journal-entry-content h2,
+.pf2e-bb.adventure-importer h2 {
+  font-family: var(--h2-font);
+  font-size: var(--h2-font-size);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.pf2e-bb div.journal-page-content h3,
+.pf2e-bb section.journal-entry-content h3,
+.pf2e-bb.adventure-importer h3 {
+  font-family: var(--h3-font);
+  font-size: var(--h3-font-size);
+}
+.pf2e-bb div.journal-page-content h4:not(.window-title),
+.pf2e-bb section.journal-entry-content h4:not(.window-title),
+.pf2e-bb.adventure-importer h4:not(.window-title) {
+  font-family: var(--h3-font);
+  font-weight: bold;
+  font-size: var(--h3-font-size);
+  text-transform: capitalize;
+}
+.pf2e-bb div.journal-page-content h1,
+.pf2e-bb section.journal-entry-content h1,
+.pf2e-bb.adventure-importer h1,
+.pf2e-bb div.journal-page-content h2,
+.pf2e-bb section.journal-entry-content h2,
+.pf2e-bb.adventure-importer h2,
+.pf2e-bb div.journal-page-content h3,
+.pf2e-bb section.journal-entry-content h3,
+.pf2e-bb.adventure-importer h3 {
+  text-align: left;
+  border: none;
+  color: var(--bb-green);
+  display: block;
+  margin: 0.4rem 0 0.15rem 0;
+}
+.pf2e-bb div.journal-page-content a.entity-link,
+.pf2e-bb section.journal-entry-content a.entity-link,
+.pf2e-bb.adventure-importer a.entity-link,
+.pf2e-bb div.journal-page-content a.entity-link.broken,
+.pf2e-bb section.journal-entry-content a.entity-link.broken,
+.pf2e-bb.adventure-importer a.entity-link.broken,
+.pf2e-bb div.journal-page-content a.content-link,
+.pf2e-bb section.journal-entry-content a.content-link,
+.pf2e-bb.adventure-importer a.content-link,
+.pf2e-bb div.journal-page-content a.inline-roll,
+.pf2e-bb section.journal-entry-content a.inline-roll,
+.pf2e-bb.adventure-importer a.inline-roll {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding-top: 2px;
+  margin: -2px 0;
+  background: var(--bb-green);
+  color: var(--bb-green-light);
+  line-height: 0.8rem;
+  border: 1px solid var(--bb-green-dark);
+  border-radius: 2px;
+}
+.pf2e-bb div.journal-page-content a.entity-link i,
+.pf2e-bb section.journal-entry-content a.entity-link i,
+.pf2e-bb.adventure-importer a.entity-link i,
+.pf2e-bb div.journal-page-content a.entity-link.broken i,
+.pf2e-bb section.journal-entry-content a.entity-link.broken i,
+.pf2e-bb.adventure-importer a.entity-link.broken i,
+.pf2e-bb div.journal-page-content a.content-link i,
+.pf2e-bb section.journal-entry-content a.content-link i,
+.pf2e-bb.adventure-importer a.content-link i,
+.pf2e-bb div.journal-page-content a.inline-roll i,
+.pf2e-bb section.journal-entry-content a.inline-roll i,
+.pf2e-bb.adventure-importer a.inline-roll i {
+  color: var(--bb-green-light);
+}
+.pf2e-bb div.journal-page-content a.entity-link:hover,
+.pf2e-bb section.journal-entry-content a.entity-link:hover,
+.pf2e-bb.adventure-importer a.entity-link:hover,
+.pf2e-bb div.journal-page-content a.entity-link.broken:hover,
+.pf2e-bb section.journal-entry-content a.entity-link.broken:hover,
+.pf2e-bb.adventure-importer a.entity-link.broken:hover,
+.pf2e-bb div.journal-page-content a.content-link:hover,
+.pf2e-bb section.journal-entry-content a.content-link:hover,
+.pf2e-bb.adventure-importer a.content-link:hover,
+.pf2e-bb div.journal-page-content a.inline-roll:hover,
+.pf2e-bb section.journal-entry-content a.inline-roll:hover,
+.pf2e-bb.adventure-importer a.inline-roll:hover {
+  text-shadow: 0 0 8px var(--bb-green);
+}
+.pf2e-bb div.journal-page-content [data-pf2-check]::before,
+.pf2e-bb section.journal-entry-content [data-pf2-check]::before,
+.pf2e-bb.adventure-importer [data-pf2-check]::before,
+.pf2e-bb div.journal-page-content [data-pf2-repost]::before,
+.pf2e-bb section.journal-entry-content [data-pf2-repost]::before,
+.pf2e-bb.adventure-importer [data-pf2-repost]::before {
+  padding: unset;
+  color: var(--bb-green-light);
+  margin-left: 2px;
+}
+.pf2e-bb div.journal-page-content [data-pf2-repost],
+.pf2e-bb section.journal-entry-content [data-pf2-repost],
+.pf2e-bb.adventure-importer [data-pf2-repost],
+.pf2e-bb div.journal-page-content [data-pf2-check],
+.pf2e-bb section.journal-entry-content [data-pf2-check],
+.pf2e-bb.adventure-importer [data-pf2-check],
+.pf2e-bb div.journal-page-content [data-pf2-check]:not([data-pf2-show-dc=gm]),
+.pf2e-bb section.journal-entry-content [data-pf2-check]:not([data-pf2-show-dc=gm]),
+.pf2e-bb.adventure-importer [data-pf2-check]:not([data-pf2-show-dc=gm]) {
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 2px;
+  background: var(--bb-green);
+  color: var(--bb-green-light);
+  margin-right: 1px;
+  border-color: var(--bb-green);
+  line-height: 0.8rem;
+}
+.pf2e-bb div.journal-page-content [data-pf2-repost]:hover,
+.pf2e-bb section.journal-entry-content [data-pf2-repost]:hover,
+.pf2e-bb.adventure-importer [data-pf2-repost]:hover,
+.pf2e-bb div.journal-page-content [data-pf2-check]:hover,
+.pf2e-bb section.journal-entry-content [data-pf2-check]:hover,
+.pf2e-bb.adventure-importer [data-pf2-check]:hover,
+.pf2e-bb div.journal-page-content [data-pf2-check]:not([data-pf2-show-dc=gm]):hover,
+.pf2e-bb section.journal-entry-content [data-pf2-check]:not([data-pf2-show-dc=gm]):hover,
+.pf2e-bb.adventure-importer [data-pf2-check]:not([data-pf2-show-dc=gm]):hover {
+  text-shadow: 0 0 8px var(--bb-green);
+}
+.pf2e-bb div.journal-page-content [data-visibility]:is(div,em,h4,p,section,span,strong):not([data-visibility=all])[data-visibility=owner],
+.pf2e-bb section.journal-entry-content [data-visibility]:is(div,em,h4,p,section,span,strong):not([data-visibility=all])[data-visibility=owner],
+.pf2e-bb.adventure-importer [data-visibility]:is(div,em,h4,p,section,span,strong):not([data-visibility=all])[data-visibility=owner] {
+  background: rgba(0, 0, 0, 0.5);
+}
+.pf2e-bb div.journal-page-content span [data-visibility]:is(div,em,h4,p,section,span,strong):not([data-visibility=all])[data-visibility=gm],
+.pf2e-bb section.journal-entry-content span [data-visibility]:is(div,em,h4,p,section,span,strong):not([data-visibility=all])[data-visibility=gm],
+.pf2e-bb.adventure-importer span [data-visibility]:is(div,em,h4,p,section,span,strong):not([data-visibility=all])[data-visibility=gm] {
+  background: inherit;
+}
+.pf2e-bb div.journal-page-content span i[data-pf2-repost],
+.pf2e-bb section.journal-entry-content span i[data-pf2-repost],
+.pf2e-bb.adventure-importer span i[data-pf2-repost] {
+  border: none;
+}
+.pf2e-bb div.journal-page-content hr,
+.pf2e-bb section.journal-entry-content hr,
+.pf2e-bb.adventure-importer hr {
+  border-bottom: 1px solid var(--bb-green);
+  border-top: 1px solid var(--bb-green);
+}
+/* -------------------------------------------- */
+/*  Importer                                    */
+/* -------------------------------------------- */
+.pf2e-bb.adventure-importer .window-content {
+  background: url("./assets/paperback.webp");
+}
+.pf2e-bb.adventure-importer .adventure-header {
+  flex: 0 0 100%;
+  height: 90px;
+  background: url(./assets/border-left.webp), url(./assets/border-right.webp), url(./assets/border-top.webp), url(./assets/border-bottom.webp), url(./assets/header-back-center.webp);
+  background-repeat: no-repeat, no-repeat, repeat-x, repeat-x, repeat-x;
+  background-position: -10px calc(100% + 3px), calc(100% + 10px) calc(100% + 3px), 100% 1px, 100% 100%, 100% 100%;
+}
+.pf2e-bb.adventure-importer .adventure-header h1 {
+  margin: 0;
+  line-height: 90px;
+  text-align: center;
+  font-family: var(--h1-font);
+  font-size: 2.5rem;
+}
+.pf2e-bb.adventure-importer figure.adventure-banner {
+  flex: 0 0 100%;
+  margin: 0.5rem 0;
+}
+.pf2e-bb.adventure-importer figure.adventure-banner img {
+  border: none;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.pf2e-bb.adventure-importer .adventure-overview {
+  padding-right: 1em;
+}
+.pf2e-bb.adventure-importer .adventure-overview p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.pf2e-bb.adventure-importer .adventure-contents {
+  min-width: fit-content;
+  gap: 1rem;
+  flex-direction: row;
+  display: flex;
+}
+.pf2e-bb.adventure-importer .adventure-contents .import-controls ul li {
+  line-height: 0.9rem;
+}
+.pf2e-bb.adventure-importer .adventure-contents ul {
+  padding: 0;
+  list-style: none;
+}
+.pf2e-bb.adventure-importer .adventure-contents ul li i {
+  color: var(--color-text-dark-inactive);
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+}
+.pf2e-bb.adventure-importer .adventure-contents label {
+  font-size: 0.8rem;
+}
+.pf2e-bb.adventure-importer .import-options {
+  flex: 1;
+  justify-content: space-between;
+}
+.pf2e-bb.adventure-importer .import-options input[type="checkbox"]:checked {
+  -webkit-filter: hue-rotate(240deg);
+  filter: hue-rotate(240deg);
+}
+.pf2e-bb.adventure-importer .adventure-footer {
+  flex: 0 0 100%;
+  margin-top: 0.5rem;
+}
+/* -------------------------------------------- */
+/*  Window Layout                               */
+/* -------------------------------------------- */
+.pf2e-bb.journal-entry {
+  min-width: 60rem;
+}
+.pf2e-bb section.window-content,
+.pf2e-bb section.journal-entry-content {
+  color: black;
+  min-height: 175px;
+}
+.pf2e-bb .window-content .journal-sheet-container section.journal-entry-content,
+.pf2e-bb .adventure-importer.window-app {
+  background: url("./assets/paperback.webp");
+}
+.pf2e-bb .window-content .journal-sheet-container section.journal-entry-content .journal-entry-page,
+.pf2e-bb .adventure-importer.window-app .journal-entry-page {
+  clear: both;
+}
+.pf2e-bb .window-content .journal-sheet-container section.journal-entry-content .journal-entry-pages,
+.pf2e-bb .adventure-importer.window-app .journal-entry-pages {
+  margin: 0;
+}
+.pf2e-bb div.editable {
+  margin: unset;
+}
+.pf2e-bb div.editable div.scrollable {
+  padding: 1rem 0 0.5rem 0;
+  scrollbar-gutter: stable both-edges;
+}
+.pf2e-bb div.editable div.scrollable div.edit-container {
+  z-index: 5;
+}
+.pf2e-bb div.editable div.scrollable header.journal-page-header {
+  text-indent: 1rem;
+}
+.pf2e-bb div.editable div.scrollable section.journal-page-content {
+  padding: 0 1rem;
+  margin: 0.5rem 0;
+}
+.pf2e-bb .journal-header {
+  margin: unset;
+}
+.pf2e-bb .journal-header input.title {
+  background: url("./assets/border-left.webp"), url("./assets/border-right.webp"), url("./assets/border-top.webp"), url("./assets/border-bottom.webp"), url("./assets/header-back-center.webp");
+  background-repeat: no-repeat, no-repeat, repeat-x, repeat-x, repeat-x;
+  background-position: -10px calc(100% + 3px), calc(100% + 10px) calc(100% + 3px), 100% 1px, 100% 100%, 100% 100%;
+  height: 90px;
+  line-height: 32px;
+  border: none;
+  text-align: center;
+  font-family: var(--h1-font);
+  font-size: 2.5rem;
+  color: var(--bb-green);
+  letter-spacing: -0.1rem;
+  text-transform: uppercase;
+}
+.pf2e-bb aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list {
+  scrollbar-gutter: stable both-edges;
+}
+.pf2e-bb aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list li.directory-item {
+  border: unset;
+}
+.pf2e-bb aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list li.directory-item:not(:first-child).level1::before {
+  content: "";
+  background: url(assets/divider.webp) no-repeat;
+  background-size: contain;
+  background-position: center;
+  top: 0;
+  width: 100%;
+  height: 1rem;
+  margin: 0.25rem 0;
+}
+.pf2e-bb aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list li.directory-item.level1 span {
+  text-indent: 0rem;
+  font-family: "Good OT Cond Bold";
+  font-size: 1.1rem;
+}
+.pf2e-bb aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list li.directory-item.level2 span {
+  text-indent: 0.5rem;
+  font-family: "Good OT";
+}
+.pf2e-bb aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list li.directory-item.level3 span {
+  text-indent: 1rem;
+  font-family: "Good OT";
+}
+.pf2e-bb aside.sidebar.flexcol.directory.journal-sidebar span.page-title {
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+}
+.pf2e-bb aside.sidebar.flexcol.directory.journal-sidebar ol.headings {
+  display: none;
+}
+.pf2e-bb aside.sidebar.flexcol.directory.journal-sidebar:not(.collapsed) {
+  flex-basis: 16rem;
+}
+.pf2e-bb aside.sidebar.flexcol.directory.journal-sidebar:not(.collapsed) span.page-number {
+  color: transparent;
+}
+.pf2e-bb aside.sidebar.flexcol.directory.journal-sidebar:not(.collapsed) .active .page-number::before {
+  content: '⮚';
+  color: white;
+  visibility: visible;
+  width: inherit;
+  display: block;
+  position: absolute;
+}
+.pf2e-bb aside.sidebar.flexcol.directory.journal-sidebar:not(.collapsed) .active + .active span.page-number ::before {
+  content: "";
+}
+.pf2e-bb.sheet.window-app.journal-sheet {
+  /*Deity Section*/
+  /*Code blocks*/
+  /*General Dropshadow*/
+  /*Images and Image Variants*/
+  /* Tables */
+  /* Lists */
+  /* Content Toolkit text blocks */
+  /* Non-callout block quotes, for example the green text poem in Chapter 1 */
+  /* Flex container for full-width content */
+}
+.pf2e-bb.sheet.window-app.journal-sheet section.gallery-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--bb-green);
+  background: var(--bb-green-light);
+  border-radius: 10px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet section.gallery-container div.item-gallery {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid var(--bb-green);
+  padding: 10px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet section.gallery-container div.item-gallery :last-of-type {
+  border-bottom: unset;
+}
+.pf2e-bb.sheet.window-app.journal-sheet section.gallery-container div.item-text {
+  flex-direction: column;
+  flex-basis: 90%;
+}
+.pf2e-bb.sheet.window-app.journal-sheet code {
+  justify-content: center;
+  border: 2px solid var(--bb-green);
+  border-radius: 10px;
+  background: rgba(75, 125, 0, 0.15);
+  padding: 5px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .shadow {
+  filter: drop-shadow(-5px -5px 5px rgba(0, 0, 0, 0.4));
+}
+.pf2e-bb.sheet.window-app.journal-sheet figure.box {
+  border: 2px solid var(--bb-green);
+  background: var(--bb-green-light);
+  border-radius: 10px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet figure.right {
+  float: right;
+  margin: 0.25rem 0 0.25rem 0.5rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet figure.right figcaption {
+  font-family: var(--main-font);
+  font-size: var(--body-font-size);
+  color: var(--bb-green);
+}
+.pf2e-bb.sheet.window-app.journal-sheet figure.flipx {
+  transform: scaleX(-1);
+}
+.pf2e-bb.sheet.window-app.journal-sheet figure.left {
+  float: left;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+}
+.pf2e-bb.sheet.window-app.journal-sheet figure.left figcaption {
+  color: var(--bb-green);
+}
+.pf2e-bb.sheet.window-app.journal-sheet figure.left.square {
+  flex-basis: 150px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet img.light-writer {
+  border-radius: 25px;
+  filter: opacity(0.8) sepia(0.9);
+  transition: 0.5s;
+}
+.pf2e-bb.sheet.window-app.journal-sheet img.light-writer:hover {
+  border-radius: 25px;
+  filter: opacity(0.8) sepia(0);
+}
+.pf2e-bb.sheet.window-app.journal-sheet table {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border: unset;
+  font-size: 0.95rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet table td,
+.pf2e-bb.sheet.window-app.journal-sheet table th {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet table th {
+  text-align: left;
+  font-family: 'Good OT Bold', serif;
+  background: var(--pf2e-red);
+  color: var(--bb-white);
+}
+.pf2e-bb.sheet.window-app.journal-sheet table tr {
+  background: var(--bb-table);
+}
+.pf2e-bb.sheet.window-app.journal-sheet table tr:nth-child(even) {
+  background: var(--bb-table-light);
+}
+.pf2e-bb.sheet.window-app.journal-sheet ul {
+  font-family: var(--main-font);
+  font-size: var(--body-font-size);
+}
+.pf2e-bb.sheet.window-app.journal-sheet dl {
+  font-family: var(--box-font);
+  font-size: var(--box-font-size);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text {
+  display: flex;
+  border: 2px solid black;
+  margin: 0.5rem;
+  margin: 1rem 2%;
+  /* Encounter Callout */
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.right {
+  float: right;
+  margin: 0.25rem 0 0.25rem 0.25rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.left {
+  float: left;
+  margin: 0.25rem 0.25rem 0.25rem 0rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text > .box-border {
+  min-height: 300px;
+  background: url(./assets/sidebar-top.webp), url(./assets/sidebar-bottom.webp);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right top, bottom left;
+  background-size: 97% 210px, 97% 210px;
+  padding: 2.5rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text > .box-border > .box-content {
+  min-height: 220px;
+  margin: 0.5rem 0.15rem 1rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text > .box-border > .box-content h2 {
+  font-family: var(--h2-sidebar);
+  font-size: var(--h2-sidebar-font-size);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text > .box-border > .box-content > h1,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text > .box-border > .box-content h2,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text > .box-border > .box-content h3 {
+  color: var(--bb-white);
+  margin-top: 0;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text ::-webkit-scrollbar-thumb {
+  background: var(--bb-gold-dark);
+  border: 1px solid var(--bb-gold);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.narrative {
+  display: block;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 10px -8px var(--color-shadow-dark);
+  font-size: 1rem;
+  font-family: var(--narrative-font);
+  border-top: 1px ridge var(--bb-green);
+  border-bottom: 1px ridge var(--bb-green);
+  border-left: none;
+  border-right: none;
+  color: var(--bb-green);
+  padding: 0.5rem;
+  margin: 0.75rem 0;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.narrative.half {
+  width: 50%;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.narrative.first {
+  margin-top: 0px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.location {
+  font-family: var(--main-font);
+  flex-direction: column;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.location .flexrow {
+  display: flex;
+  justify-content: space-between;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.location .flexrow :nth-child(even) {
+  text-align: right;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.location .flexrow.head {
+  border-bottom: 1px solid;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.location ul {
+  margin: unset;
+  padding: unset;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.location ul.traits {
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.location ul.traits li {
+  border-left: 5px solid var(--bb-gold);
+  border-right: 5px solid var(--bb-gold);
+  background: var(--pf2e-red);
+  color: white;
+  padding: 6px 8px 2px 8px;
+  text-transform: uppercase;
+  font-family: 'Good OT Cond Bold';
+  max-height: 24px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.location ul.npcs {
+  padding: unset;
+  list-style-type: none;
+  font-size: var(--body-font-size);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.location ul.npcs li {
+  margin: 8px 0px 8px 0px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.location ul.features {
+  margin-left: 20px;
+  max-width: 100%;
+  font-size: var(--body-font-size);
+  list-style-type: none;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.location ul.features li {
+  margin-bottom: 5px;
+  max-width: 500px;
+  min-width: 200px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text .subflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text .subflex ul {
+  flex-basis: 60%;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text .subflex .p {
+  flex-basis: 30%;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text hr {
+  width: 100%;
+  margin: 4px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt {
+  display: block;
+  border: 2px solid black;
+  border-radius: 40px 8px 8px 8px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter header,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure header,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation header,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt header {
+  position: relative;
+  min-height: 80px;
+  padding-left: 100px;
+  border-bottom: 2px solid black;
+  border-radius: 40px 6px 0 40px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter header img,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure header img,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation header img,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt header img {
+  height: 96px;
+  width: 96px;
+  position: absolute;
+  left: -8px;
+  top: -10px;
+  border: none;
+  filter: drop-shadow(2px 2px 4px black);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter header h1,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure header h1,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation header h1,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt header h1,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter header h2,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure header h2,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation header h2,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt header h2 {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter article,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure article,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation article,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt article {
+  padding: 0.5rem 1rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter article h3,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure article h3,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation article h3,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt article h3 {
+  margin: 0.5rem 0 0;
+  padding-top: 0.5rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter article h3:first-child,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure article h3:first-child,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation article h3:first-child,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt article h3:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter a.content-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure a.content-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation a.content-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt a.content-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter a.entity-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure a.entity-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation a.entity-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt a.entity-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter a.inline-roll,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure a.inline-roll,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation a.inline-roll,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt a.inline-roll {
+  padding: 2px;
+  line-height: 0.8rem;
+  font-weight: bold;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter header {
+  color: white;
+  background: #5e0000;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter header h1,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter header h2 {
+  color: white;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter article h3 {
+  color: var(--pf2e-red);
+  border-top: 2px solid var(--pf2e-red);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter a.content-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter a.entity-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter a.inline-roll,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter [data-pf2-repost],
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter [data-pf2-check],
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter [data-pf2-check]:not([data-pf2-show-dc=gm]),
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--bb-green-light);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter a.content-link i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter a.entity-link i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter a.inline-roll i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter [data-pf2-repost] i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter [data-pf2-check] i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter [data-pf2-check]:not([data-pf2-show-dc=gm]) i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.encounter [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) i {
+  color: var(--bb-green-light);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt header {
+  color: #ff812f;
+  background: #3e3e3e;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt header h2,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt header h3 {
+  color: #ff812f;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt article h3 {
+  color: var(--color-text-hyperlink);
+  border-top: 2px solid var(--color-text-hyperlink);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt a.content-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt a.entity-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt a.inline-roll,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt [data-pf2-repost],
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt [data-pf2-check],
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt [data-pf2-check]:not([data-pf2-show-dc=gm]),
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) {
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 2px;
+  line-height: 0.8rem;
+  font-weight: bold;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt a.content-link i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt a.entity-link i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt a.inline-roll i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt [data-pf2-repost] i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt [data-pf2-check] i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt [data-pf2-check]:not([data-pf2-show-dc=gm]) i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.fvtt [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) i {
+  color: white;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation header {
+  color: white;
+  background: #005e37;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation header h1,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation header h2 {
+  color: white;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation article h3 {
+  color: var(--bb-green);
+  border-top: 2px solid var(--bb-green);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation a.content-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation a.entity-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation a.inline-roll,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation [data-pf2-repost],
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation [data-pf2-check],
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation [data-pf2-check]:not([data-pf2-show-dc=gm]),
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) {
+  background: var(--bb-green);
+  border-color: var(--bb-green-light);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation a.content-link i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation a.entity-link i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation a.inline-roll i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation [data-pf2-repost] i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation [data-pf2-check] i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation [data-pf2-check]:not([data-pf2-show-dc=gm]) i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.investigation [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) i {
+  color: var(--bb-green-light);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure header {
+  color: white;
+  background: #0e005e;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure header h1,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure header h2 {
+  color: white;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure article h3 {
+  color: var(--paizo-blue-dark);
+  border-top: 2px solid var(--pf2e-red);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure a.content-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure a.entity-link,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure a.inline-roll,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure [data-pf2-repost],
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure [data-pf2-check],
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure [data-pf2-check]:not([data-pf2-show-dc=gm]),
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) {
+  background: var(--paizo-blue-dark);
+  border-color: var(--pf2e-gold);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure a.content-link i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure a.entity-link i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure a.inline-roll i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure [data-pf2-repost] i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure [data-pf2-check] i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure [data-pf2-check]:not([data-pf2-show-dc=gm]) i,
+.pf2e-bb.sheet.window-app.journal-sheet .box-text.treasure [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) i {
+  color: var(--bb-green-light);
+}
+.pf2e-bb.sheet.window-app.journal-sheet blockquote {
+  border: unset;
+}
+.pf2e-bb.sheet.window-app.journal-sheet blockquote p {
+  font-family: 'Sabon LT', serif;
+}
+.pf2e-bb.sheet.window-app.journal-sheet blockquote.bb-quote {
+  color: var(--bb-green);
+  float: left;
+  margin: 10px 10px 0px 0px;
+  padding: 10px;
+  border-right: 2px solid var(--bb-green);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .bb-flexcol {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px 10px 10px;
+  padding: 10px 10px 0;
+  background: #d3e5af;
+  border: 2px solid var(--bb-green);
+  border-radius: 10px;
+  box-shadow: 0 0 6px #637063 inset;
+  color: black;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .bb-flexcol h2 {
+  font-family: var(--h1-font);
+  color: var(--bb-green);
+  font-weight: normal;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .bb-flexcol h2:first-child {
+  margin-top: 0;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .bb-flexcol h2:nth-of-type(2) {
+  border-top: 2px dotted var(--bb-green);
+  padding-top: 5px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .bb-flexcol h4 {
+  font-size: 1.25rem;
+  color: var(--bb-green);
+  margin-bottom: 0;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .bb-flexcol p {
+  font-family: var(--box-font);
+  font-size: var(--box-font-size);
+  line-height: var(--box-font-size);
+}
+.pf2e-bb.sheet.window-app.journal-sheet aside.bb-sidebar {
+  border-left: 3px solid;
+  flex-basis: 37%;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet aside.bb-sidebar ul {
+  font-size: 0.8rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet aside.bb-float-block {
+  float: right;
+  margin: 0 5px 5px 10px;
+  width: 280px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  background: #d3e5af;
+  border: 2px solid var(--bb-green);
+  border-radius: 10px;
+  box-shadow: 0 0 4px #637063 inset;
+  color: black;
+}
+.pf2e-bb.sheet.window-app.journal-sheet aside.bb-float-block h2 {
+  font-family: var(--h1-font);
+  color: var(--bb-green);
+  font-weight: normal;
+}
+.pf2e-bb.sheet.window-app.journal-sheet aside.bb-float-block h2:first-child {
+  margin-top: 0;
+}
+.pf2e-bb.sheet.window-app.journal-sheet aside.bb-float-block h4 {
+  font-size: 1.25rem;
+  color: var(--bb-green);
+  margin-bottom: 0;
+}
+.pf2e-bb.sheet.window-app.journal-sheet aside.bb-float-block p {
+  font-family: var(--box-font);
+  font-size: var(--box-font-size);
+  line-height: 1.2rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .character-gallery {
+  justify-content: space-around;
+  margin: 1rem 0;
+  background: var(--bb-green-light);
+  border: 2px solid var(--bb-green);
+  border-radius: 10px;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .character-gallery figure {
+  flex: 0 0 160px;
+  margin: 0.25rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .character-gallery figure img {
+  border: none;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .character-gallery figure figcaption {
+  font-family: var(--main-font);
+  font-size: var(--body-font-size);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .character-creation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 99%;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .character-creation article {
+  border: 2px solid var(--bb-green);
+  border-radius: 10px;
+  background: var(--bb-green-light-half);
+  flex-basis: 49%;
+  padding: 0 0.5rem;
+  margin: 0.5rem 0;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .character-creation article.full {
+  flex-basis: 100%;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .character-creation article h3 {
+  border-bottom: 3px dotted var(--bb-green);
+  margin-bottom: 1rem;
+}
+.pf2e-bb.sheet.window-app.journal-sheet .character-creation article section {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+  font-family: var(--main-font);
+  font-size: var(--body-font-size);
+}
+.pf2e-bb.sheet.window-app.journal-sheet .character-creation article section img {
+  border: none;
+  filter: drop-shadow(2px 4px 6px black);
+}
