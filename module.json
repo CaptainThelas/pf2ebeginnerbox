@@ -1,0 +1,95 @@
+{
+  "id": "pf2e-beginner-box",
+  "version": "3.0.1",
+  "title": "Pathfinder Beginner Box",
+  "description": "<p>The Pathfinder Beginner Box contains everything you need to learn how to play the second edition of the Pathfinder Roleplaying Game while simultaneously teaching you how to use Foundry VTT features. Lovingly converted by members of the Pathfinder Second Edition community and the Foundry Virtual Tabletop staff, with careful attention paid to modernise the content for use on a virtual tabletop while respecting the original work. Experience the Menace Under Otari adventure using the full suite of Foundry VTT features, using maps, tiles, tokens, sounds, and much more to bring you content which truly cannot be experienced in the same way anywhere else.</p>",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11",
+    "maximum": "12.327"
+  },
+  "manifest": "https://foundryvtt.s3.us-west-2.amazonaws.com/modules/pf2e-beginner-box/module.json",
+  "authors": [
+    {
+      "name": "Andrew Clayton",
+      "discord": "Atropos#3814",
+      "url": "https://foundryvtt.com",
+      "flags": {}
+    },
+    {
+      "name": "Shane Martland",
+      "discord": "Anathema#3668",
+      "url": "https://foundryvtt.com",
+      "flags": {}
+    },
+    {
+      "name": "Viviane Charlier",
+      "discord": "Cora#0642",
+      "flags": {}
+    },
+    {
+      "name": "Marco Seither",
+      "discord": "Abaddon#3851",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "js/pf2e-bb.mjs"
+  ],
+  "styles": [
+    "styles/pf2e-bb.css"
+  ],
+  "packs": [
+    {
+      "name": "adventures",
+      "label": "Pathfinder Beginner Box",
+      "banner": "modules/pf2e-beginner-box/assets/artwork-other/bb-banner.webp",
+      "path": "packs/adventures",
+      "type": "Adventure",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "media": [
+    {
+      "type": "setup",
+      "caption": "Beginner Box",
+      "thumbnail": "modules/pf2e-beginner-box/assets/artwork-other/bb-thumb.webp",
+      "loop": false,
+      "flags": {}
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "path": "lang/en/en.json",
+      "name": "",
+      "flags": {}
+    },
+    {
+      "lang": "de",
+      "path": "lang/de/de.json",
+      "name": "",
+      "flags": {}
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "compatibility": {
+          "minimum": "4.0.0"
+        },
+        "type": "system"
+      }
+    ]
+  },
+  "flags": {
+    "pf2e-beginner-box": {
+      "pf2e-art": "modules/pf2e-beginner-box/image-mapping.json"
+    }
+  }
+}
